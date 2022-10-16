@@ -1,15 +1,15 @@
 package main
 
 import (
-
-	"pctito/go-datastructs-algos/structs"
+	"github.com/pctito/go-ds-algo/structs"
 )
 
 func main() {
 
 	ll := new(structs.Linked)
 	ll.PrintLs()
-	ll.Prepend(5)
+	ll.PrependInt(42)
+	ll.PrependInt(5)
 	ll.PrintLs()
 
 }

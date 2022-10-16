@@ -2,18 +2,18 @@ package structs
 
 import "fmt"
 
-type Node struct {
-	next *Node
+type node struct {
+	next *node
 	val  int
 }
 
 type Linked struct {
-	head *Node
+	head *node
 	len  int
 }
 
-func (l *Linked) Prepend(value int) {
-	newNode := Node{val: value}
+func (l *Linked) PrependInt(value int) {
+	newNode := node{val: value}
 	if l.head != nil {
 		newNode.next = l.head
 		l.head = &newNode
@@ -22,10 +22,6 @@ func (l *Linked) Prepend(value int) {
 		l.head = &newNode
 		l.len++
 	}
-}
-
-func (l *Linked) AppendInt(value int) {
-	return
 }
 
 func (l *Linked) PrintLs() {
